@@ -6,6 +6,21 @@ En este respositorio:
 
 Este flujo es un ejemplo de cómo pasar de un modelo entrenado con Scikit-Learn (Python) a una implementación que corre en hardware con recursos limitados. Por simplicidad, el modelo en C correrá en el framwork de Arduino, pero la implementación es porteable a cualquier otro framework o modelo de microcontrolador; sólo hay que usar la función de clasificación del header *random_forest_model.h* y archivo que contiene el código del modelo *random_forest_model.c*.
 
+**Clonar repo** ([Instalar git](https://git-scm.com/downloads/win) si no lo has hecho)
+```Bash
+git clone https://github.com/rescurib/random_forest_arduino_uno.git
+```
+
+**Crear y activar entorno virtual de Python** 
+Abrir una ventana de comandos dentro de la carpeta del repo y ejecutar:
+```Bash
+# En Windows
+setup_env.cmd
+
+# En Linux
+./setup_env.sh
+```
+
 ## Introducción
 
 Los **bosques aleatorios** (*Random Forests*) son uno de los algoritmos más populares y robustos del aprendizaje automático. Pueden usarse tanto en problemas de **clasificación** como de **regresión** y se basan en la idea de combinar muchos **árboles de decisión** para obtener una predicción más estable y precisa.
@@ -46,8 +61,6 @@ graph LR
     V3 --> R
     R --> F["✅ Predicción final: Tipo 1 (mayoría de votos)"]
 ```
-
----
 
 ## ⚙️ Ventajas y Consideraciones
 
@@ -163,3 +176,14 @@ flowchart TD
     Clase más probable: <clase>
     Tiempo de inferencia (us): <tiempo>
     ```
+
+## Programa de envío de muestra
+
+Una vez que hayas cargado el programa en el Arduino, ajusta el número de puerto COM en `clasificador_serial_arduino.py`. Este programa selecciona un elemento aleatorio del conjunto Wine, lo envía al Arduino por serial y evalua su respuesta.
+Para ejecutarlo:
+```Bash
+python clasificador_serial_arduino.py
+
+# En Windows tal vez tengas que usar:
+py clasificador_serial_arduino.py
+```
