@@ -104,6 +104,12 @@ print(f"Exactitud del modelo: {acc:.2f}")
 print("Número de árboles entrenados:", len(clf.estimators_))
 ```
 
+**Salida**
+```Bash
+Exactitud del modelo: 0.97
+Número de árboles entrenados: 10
+```
+
 ## Exportar modelo a código en C
 
 ```Python
@@ -176,6 +182,12 @@ flowchart TD
     Clase más probable: <clase>
     Tiempo de inferencia (us): <tiempo>
     ```
+
+Si compiamos y pegamos esta muestra en el monitor serial del IDE de Arduino este es el resultado:
+```Bash
+Clase más probable: 1
+Tiempo de inferencia (us): 428
+```
 
 ## Programa de envío de muestra
 
