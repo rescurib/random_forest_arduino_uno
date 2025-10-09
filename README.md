@@ -109,6 +109,7 @@ print("Número de árboles entrenados:", len(clf.estimators_))
 Exactitud del modelo: 0.97
 Número de árboles entrenados: 10
 ```
+> **NOTA**. Si quieres adaptar este proceso a una aplicación diferente, por ejemplo, usar sensores para clasificar un producto en una celda de manufactura, la variable `data` deberá ser un conjunto de datos que deberás obtener tomando cientos de mediciones y etiquetando cada muestra manualmente.
 
 ## Exportar modelo a código en C
 
@@ -183,7 +184,7 @@ flowchart TD
     Tiempo de inferencia (us): <tiempo>
     ```
 
-Si compiamos y pegamos esta muestra en el monitor serial del IDE de Arduino este es el resultado:
+Si copiamos y pegamos esta muestra en el monitor serial del IDE de Arduino este es el resultado:
 ```Bash
 Clase más probable: 1
 Tiempo de inferencia (us): 428
