@@ -200,3 +200,8 @@ python clasificador_serial_arduino.py
 # En Windows tal vez tengas que usar:
 py clasificador_serial_arduino.py
 ```
+
+## Referencias
+* [Aprende Machine Learning con Scikit-Learn, Keras y TensorFlow [3Ed]](https://anayamultimedia.es/libro/titulos-especiales/aprende-machine-learning-con-scikit-learn-keras-y-tensorflow-tercera-edicion-aurelien-geron-9788441548046/), Aurélien Géron
+  * Capitulo 6: Árboles de decisión
+  * Capitulo 7: Ensamblaje y *random forests*
